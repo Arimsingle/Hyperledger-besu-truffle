@@ -1,0 +1,19 @@
+{
+  "name": "Permissioned-Network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server1": "besu --data-path=./Node-1/data --genesis-file=./cliqueGenesis.json --permissions-nodes-config-file-enabled --permissions-accounts-config-file-enabled --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,PERM,CLIQUE --host-allowlist='*' --rpc-http-cors-origins='*'",
+    "server2": "besu --data-path=./Node-2/data --genesis-file=./cliqueGenesis.json --permissions-nodes-config-file-enabled --permissions-accounts-config-file-enabled --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,PERM,CLIQUE --host-allowlist='*' --rpc-http-cors-origins='*' --p2p-port=30304 --rpc-http-port=8546",
+    "server3": "besu --data-path=./Node-3/data --genesis-file=./cliqueGenesis.json --permissions-nodes-config-file-enabled --permissions-accounts-config-file-enabled --rpc-http-enabled --rpc-http-api=ADMIN,ETH,NET,PERM,CLIQUE --host-allowlist='*' --rpc-http-cors-origins='*' --p2p-port=30305 --rpc-http-port=8547",
+    "node1":"",
+    "node2":"",
+    "node3":"",
+    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
